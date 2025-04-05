@@ -35,11 +35,10 @@ app.get("/auth1", (req, res) => {
 `);
 });
 
-//Import Routes
 import healthcheckRouter from "./routes/healthcheck.routes.js";
 app.use("/api/v1/healthcheck", healthcheckRouter);
 app.use("/api/v1/users", userRouter);
-app.use("/api/v1/videos", videoRouter);
+app.use("/api/v1", videoRouter);
 app.use("/api/v1/likes", likeRouter);
 app.use("/api/v1/comments", commentRouter);
 app.use("/api/v1/playlists", playlistRouter);
